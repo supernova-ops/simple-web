@@ -1,2 +1,4 @@
-xinfra/*.tar
-platform
+*.pem
+*.tfstate
+*.tfstate.backup
+.terraform/
