@@ -1,7 +1,7 @@
 name: first-hello-workflow
 on: [push]
 jobs:
-  shell-cmd-job
+  shell-cmd-job:
     runs-on: ubuntu-lastest
     steps:
       - nmae: echo Hello
@@ -10,4 +10,4 @@ jobs:
         run: |
           node -v
           npm -v
-          
+
