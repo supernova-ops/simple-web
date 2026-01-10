@@ -1,13 +1,12 @@
 name: first-hello-workflow
 on: [push]
 jobs:
-  shell-cmd-job:
-    runs-on: ubuntu-lastest
+  shell-cmd-job:          # 1. 여기에 콜론(:) 추가
+    runs-on: ubuntu-latest # 2. lastest -> latest 로 수정
     steps:
-      - nmae: echo Hello
+      - name: echo Hello   # 3. nmae -> name 으로 수정
         run: echo "Hello inchon world"
       - name: multiple line cmd
         run: |
           node -v
           npm -v
-
