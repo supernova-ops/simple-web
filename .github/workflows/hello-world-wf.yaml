@@ -1,0 +1,13 @@
+name: first-hello-workflow
+on: [push]
+jobs:
+  shell-cmd-job
+    runs-on: ubuntu-lastest
+    steps:
+      - nmae: echo Hello
+        run: echo "Hello inchon world"
+      - name: multiple line cmd
+        run: |
+          node -v
+          npm -v
+          
