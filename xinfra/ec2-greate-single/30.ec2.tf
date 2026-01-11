@@ -12,8 +12,8 @@ resource "aws_key_pair" "ec2_key_pair" {
 
 resource "aws_instance" "nginx_instance" {
   subnet_id = aws_subnet.dangtong-vpc-public-subnet["a"].id
-  ami             = "ami-08b09b6acd8d62254" # Amazon Linux 2 AMI (리전별로 AMI ID가 다를 수 있음)
-  instance_type   = "t2.micro"
+  ami             = "ami-03fd85ef2fae79c05" # Amazon Linux 2 AMI (리전별로 AMI ID가 다를 수 있음)
+  instance_type   = "t3.micro"
   key_name        = aws_key_pair.ec2_key_pair.key_name # AWS에서 생성한 SSH 키 적용
   vpc_security_group_ids = [aws_security_group.nginx_sg.id]
   iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
