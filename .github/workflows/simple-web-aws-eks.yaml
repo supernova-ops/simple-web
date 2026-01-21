@@ -65,4 +65,3 @@ jobs:
           git remote set-url origin https://${{ secrets.PAT }}@github.com/supernova-ops/simple-service.git # 바꾸기
 
           git push origin main
-
