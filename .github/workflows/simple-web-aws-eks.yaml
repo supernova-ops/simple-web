@@ -59,8 +59,8 @@ jobs:
       # 변경사항 커밋 및 푸시
       - name: 12.서비스 리포지토리 변경사항 커밋 및 푸시
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'supernova-ops'
+          git config --global user.email 'supernova050103@gmail.com'
           git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
           git remote set-url origin https://${{ secrets.PAT }}@github.com/supernova-ops/simple-service.git # 바꾸기
 
