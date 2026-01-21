@@ -61,7 +61,7 @@ jobs:
         run: |
           git config --global user.name 'supernova-ops'
           git config --global user.email 'supernova050103@gmail.com'
-          git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
+          git commit -am "Update image tag to ${{ env.DOCKER_TAG }}" || echo "No changes to commit"
           git remote set-url origin https://${{ secrets.PAT }}@github.com/supernova-ops/simple-service.git # 바꾸기
 
           git push origin main
